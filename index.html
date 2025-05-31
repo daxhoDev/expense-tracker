@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Expense Tracker - by daxho</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" defer src="src/js/controller.js"></script>
+  </head>
+
+  <body>
+    <!-- Country selector -->
+    <!-- <div class="country-container">
+      <p class="country-container__code"></p>
+      <img class="country-container__flag" />
+    </div> -->
+    <div class="ui">
+      <!-- Header -->
+      <header class="section main-header">
+        <h1 class="main-header__title">Expense Tracker</h1>
+      </header>
+      <main class="main-section">
+        <!-- Movement type selection buttons -->
+        <div class="type-buttons">
+          <button class="type-button type-button--income selected">
+            INCOME
+          </button>
+          <button class="type-button type-button--expense">EXPENSE</button>
+        </div>
+        <!-- Movement Form -->
+        <form
+          class="section section--divided main-section__form"
+          data-type="income"
+        >
+          <input
+            class="form__input-field form__input-field--name"
+            type="text"
+            placeholder="Income name"
+            required
+          />
+          <input
+            class="form__input-field form__input-field--value"
+            type="number"
+            placeholder="Value"
+            required
+          />
+          <input
+            class="form__add form__add--income"
+            type="submit"
+            value="Add"
+          />
+        </form>
+        <!-- Movements list -->
+        <ul class="section section--divided main-section__movements">
+          <li class="movement movement--empty">No movements recorded</li>
+        </ul>
+        <!-- Total value section -->
+        <div class="section main-section__total-value">
+          <p class="total-value">Total: <span id="value">0</span> $</p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

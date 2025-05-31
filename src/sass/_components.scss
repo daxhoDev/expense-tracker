@@ -1,0 +1,45 @@
+.type-buttons {
+  display: flex;
+}
+
+.type-button {
+  background-color: $dark-background;
+  color: rgb(25, 25, 25);
+  font-weight: 600;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  opacity: 30%;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.selected {
+    box-shadow: none;
+    background-color: $lighter-background;
+    opacity: 100%;
+  }
+
+  &--income {
+    border-bottom-right-radius: 0.5em;
+  }
+
+  &--expense {
+    border-bottom-left-radius: 0.5em;
+  }
+}
+
+.main-section__total-value {
+  font: {
+    size: 1.5rem;
+    weight: 600;
+  }
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "Personal expenses and incomes tracker",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist "
+  },
+  "author": "Daxho",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.42.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  }
+}

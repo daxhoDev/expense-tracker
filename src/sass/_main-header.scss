@@ -1,0 +1,17 @@
+.main-header {
+  text-align: center;
+
+  &__title {
+    font: {
+      size: 1.5rem;
+      weight: 700;
+    }
+  }
+
+  &__subtitle {
+    font: {
+      size: 1.2rem;
+      weight: 600;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+$lighter-background: rgb(239, 247, 255);
+$light-background: rgb(224, 234, 241);
+$dark-background: rgb(212, 222, 230);
+$body-light: rgb(201, 213, 253);
+
+$light-red: rgb(255, 77, 77);
+$dark-red: rgb(228, 39, 39);
+
+$light-green: rgb(68, 209, 65);
+$dark-green: rgb(13, 174, 13);
+
+$green-gradient: linear-gradient(
+  to top left,
+  $dark-green 0%,
+  $light-green 100%
+);
+$red-gradient: linear-gradient(to top left, $dark-red 0%, $light-red 100%);
+
+$inner-border-radius: 9px;
+$outer-border-radius: 17px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font: {
+    family: "Segoe UI", Ubuntu, Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $body-light;
+}
+
+.ui {
+  width: 90%;
+  max-width: 30rem;
+  min-width: 16rem;
+}
+
+.main-section {
+  background-color: $lighter-background;
+  border-radius: $outer-border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section {
+  padding: 1rem;
+
+  &--divided {
+    border-bottom: 1px solid $dark-background;
+  }
+}
