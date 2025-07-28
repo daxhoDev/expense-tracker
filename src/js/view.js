@@ -28,13 +28,8 @@ function displayEmpty(movements) {
   }
 }
 
-/**
- *
- * @param {*} state
- */
-
 function renderMovements(state) {
-  state.movements.forEach(mov => {
+  state.movements.forEach((mov) => {
     //prettier-ignore
     const markup = `
     <li class="movement" data-id="${mov.id}">
@@ -60,7 +55,7 @@ function renderMovements(state) {
 
 //TODO: Add country data displaying funcionality
 export function switchSelectionByClick(e) {
-  typeBtns.forEach(el => {
+  typeBtns.forEach((el) => {
     el.classList.remove("selected");
   });
   e.target.classList.add("selected");
@@ -76,7 +71,7 @@ export function switchSelectionByKeyboard(e) {
   )
     return;
 
-  typeBtns.forEach(el => {
+  typeBtns.forEach((el) => {
     el.classList.toggle("selected");
   });
 }
@@ -104,14 +99,14 @@ export function updateUI(state) {
 //EVENT LISTENERS=======================================================================
 
 export function addHandlerEnter() {
-  nameInput.addEventListener("keydown", e => {
+  nameInput.addEventListener("keydown", (e) => {
     if (e.key !== "Enter") return;
     valueInput.focus();
   });
 }
 
 export function addHandlerSubmit(handler) {
-  form.addEventListener("submit", e => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = nameInput.value;
@@ -124,7 +119,7 @@ export function addHandlerSubmit(handler) {
 }
 
 export function addHandlerDelete(handler) {
-  movementsList.addEventListener("click", e => {
+  movementsList.addEventListener("click", (e) => {
     const btn = e.target.closest(".delete");
     if (!btn) return;
     const id = Number(btn.closest(".movement").dataset.id);
