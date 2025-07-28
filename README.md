@@ -9,7 +9,7 @@ A simple web application to record and visualize your expenses and income.
 - Delete movements easily.
 - Switch movement type using keyboard or mouse.
 - Responsive and modern UI.
-- **All data is stored locally in your browser (no server required).**
+- All data is stored locally in your browser (no server required).
 
 ## Project Structure
 
