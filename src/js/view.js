@@ -8,6 +8,7 @@ const form = document.querySelector(".main-section__form");
 const addBtn = document.querySelector(".form__add");
 const movementsList = document.querySelector(".main-section__movements");
 const spanTotalValue = document.getElementById("value");
+const spanCurrency = document.getElementById("currency");
 const typeBtnsContainer = document.querySelector(".type-buttons");
 const typeBtns = document.querySelectorAll(".type-button");
 
@@ -39,7 +40,7 @@ function renderMovements(state) {
             <span class="type type--${mov.type}">${mov.type.toUpperCase()}</span>
             ${mov.name}
           </span>
-          <span class="value">${mov.value} $</span>
+          <span class="value">${mov.value} ${state.currency}</span>
         </p>
         <button class="delete">
             <img class="delete-img" src="${closeIcon} alt="closing x">
@@ -51,6 +52,7 @@ function renderMovements(state) {
   });
 
   spanTotalValue.textContent = state.total;
+  spanCurrency.textContent = state.currency;
 }
 
 //TODO: Add country data displaying funcionality

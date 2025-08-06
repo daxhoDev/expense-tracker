@@ -27,16 +27,22 @@ class Expense extends Movement {
 export let state = {
   movements: [],
   total: 0,
+  currency: '',
 };
 
-// export const country = {
-//   code,
-//   flagURL,
-//   currency,
-//   ip,
-
-//   // TODO: Add country data fetching funcionality
-// };
+//Fetch country data
+export async function fetchCurrency() {
+  console.log("Fetching country data...");
+  try {
+    const response = await fetch("https://ipapi.co/json");
+    const data = await response.json();
+    state.currency = data.currency;
+    console.log(`Currency fetched: ${state.currency}`);
+  } catch (error) {
+    state.currency = "USD";
+    console.log(`Currency not fetched, setting to default: ${state.currency}`);
+  }
+}
 
 //Calculate total balance based on movements
 function calcTotal() {
@@ -53,7 +59,7 @@ export function addNewMovement(name, type, value) {
 
 //Deleting a movement
 export function deleteMovement(id) {
-  state.movements = state.movements.filter(mov => mov.id !== id);
+  state.movements = state.movements.filter((mov) => mov.id !== id);
   calcTotal();
 }
 

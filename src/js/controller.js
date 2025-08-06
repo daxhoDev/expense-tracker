@@ -37,6 +37,7 @@ function controlDelete(id) {
 //Start the App
 function init() {
   model.loadLocalStorage();
+  model.fetchCurrency();      
   view.updateUI(model.state);
   view.nameInput.focus();
 
