@@ -65,10 +65,10 @@ export function deleteMovement(id) {
 
 export function loadLocalStorage() {
   if (localStorage.length === 0) return;
-  state = JSON.parse(localStorage.getItem("state"));
+  state.movements = JSON.parse(localStorage.getItem("movements"));
   calcTotal();
 }
 
 export function saveLocalStorage() {
-  localStorage.setItem("state", JSON.stringify(state));
+  localStorage.setItem("movements", JSON.stringify(state.movements));
 }

@@ -35,9 +35,9 @@ function controlDelete(id) {
 //====================================================================================
 
 //Start the App
-function init() {
+async function init() {
+  await model.fetchCurrency();
   model.loadLocalStorage();
-  model.fetchCurrency();      
   view.updateUI(model.state);
   view.nameInput.focus();
 
